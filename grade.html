@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>A grading program</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var a, b, c, d, ave, g, m
+		
+
+		a = prompt("Please enter your grade in the first quarter", 0)
+		b = prompt("Please enter your grade in the second quarter", 0)
+		c = prompt("Please enter your grade in the third quarter", 0)
+		d = prompt("Please enter your grade in the fourth quarter", 0)
+
+		ave = (parseFloat(a) + parseFloat(b) + parseFloat(c) + parseFloat(d)) / 4
+
+		if (ave >= 95) 
+		{
+      g = 'A'
+    }
+    
+    else if (ave >= 90 && ave < 95)
+    {
+      g = 'A-'
+    }
+    
+    else if (ave >= 85 && ave < 90)
+    {
+      g = 'B+'
+    }
+    
+    else if (ave >= 80 && ave < 85)
+    {
+      g = 'B'
+    }
+    
+    else if (ave >= 75 && ave < 80)
+    {
+      g = 'B-'
+    }
+    
+    else 
+    {
+      g = 'C'
+    }
+    
+    switch(g)
+    {
+        case('A'):
+          m = "OUTSTANDING"
+          break
+        
+        case('A+'):
+          m = "EXCELENT"
+          break
+        
+        case('A'):
+          m = "VERY GOOD"
+          break
+        
+        case('A-'):
+          m = "GOOD"
+          break
+        
+        case('B+'):
+          m = "SATISFACTORY"
+          break
+        
+        case('B'):
+          m = "PASS"
+          break
+        
+        default:
+          m = "FAIL"
+    }
+        
+    
+    document.write("<h1>", m, "</h1>")
+    document.write("Your first quarter grade is ", a)
+    document.write("<br>Your second quarter grade is ", b)
+    document.write("<br>Your third quarter grade is ", c)
+    document.write("<br>Your fourth quarter grade is ", d)
+    document.write("<br>Your <b>average</b> is ", ave)
+    document.write("<br>Your <b>lettergrade</b> is ", g)
+    
+  </script>
+  
+</body>
+</html> 
